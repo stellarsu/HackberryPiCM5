@@ -9,7 +9,7 @@ But note that RaspberryPi5 or BCM2712 is relativly a new chip. Some OS may have 
 
 ```Step1``` Download the ```vc4-kms-dpi-hyperpixel4sq.dtbo``` and ```hyperpixel4.dtbo``` file in this page  
 ```Step2``` Put the two files into the ```/overlay/``` folder of the image disk  
-```Step3```  Copy and paste the following lines into the ```/boot/config.txt```  
+```Step3```  Copy and paste the following lines into the ```/bootfs/config.txt```  
 ```sh
 dtoverlay=vc4-kms-v3d
 dtoverlay=vc4-kms-dpi-hyperpixel4sq
@@ -28,7 +28,8 @@ Here is the solution to fix that:
 
 ```Step1``` Download the ```hackberrypi.dtbo``` file in this page   
 ```Step2``` Put the file into the ```/overlay``` folder of the image disk   
-```Step3``` Delete ```dtoverlay=vc4-kms-dpi-hyperpixel4sq``` and paste the following into the ```/boot/config.txt```  
+```Step3``` Delete ```dtoverlay=vc4-kms-dpi-hyperpixel4sq``` and paste the following into the ```/boot/firmware/config.txt```  
 ```sh
 dtoverlay=hackberrypi
 ```
+
